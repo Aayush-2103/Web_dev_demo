@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | TASA Code Craft</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div id="body" class="bg-gradient-to-b from-[#03045E] to-[#0077B6] h-[100vh] grid grid-rows-[10vh_auto]">  
+
+        <div id="navigationBar" class="w-screen shadow-black shadow-lg
+                                grid grid-cols-[30px_200px] gap-3 px-4 py-5 items-center
+                                lg:grid lg:grid-cols-[250px_700px] lg:gap-6 lg:px-6 lg:py-6">
+            
+            <div class="flex items-center justify-center scale-150 lg:hidden" id="nav">
+                <button>
+                    <i class="fa-solid fa-bars" style="color: #caf0e4;"></i>
+                </button>
+            </div>
+            <div class="bg-yellow-500 h-full flex items-center justify-center rounded-2xl">
+                <p class="font-extrabold text-md p-1 lg:text-xl">TASA Code_Craft Logo</p>
+            </div>           
+        </div>
+
+        <div class="flex justify-center">
+            <div id="container" class="max-w-[80%] lg:w-[75vh] lg:h-[55vh] lg:my-32 my-40 border-2 border-black rounded-2xl shadow-lg shadow-black lg:grid lg:grid-cols-[300px_auto] lg:gap-20 p-3 bg-[#1b1b1b]/20">
+                <div id="Left" class="lg:bg-yellow-300 lg:border-2 lg:border-black lg:rounded-xl lg:w-full lg:flex lg:items-center lg:justify-center hidden">
+                    <p class="lg:font-bold lg:text-black text-2xl ">Image will be here</p>
+                </div>
+
+                <div id="Right" class="w-[100%] px-5 rounded-2xl">
+                    <h1 class="text-5xl lg:text-6xl text-white font-extrabold my-10">Login</h1>
+                    <p class="text-[12px] pr-1 text-right text-[#dbdbdb] font-bold">Get access to the exclusive 300+ hours of courses, tutorials and practice sheets to prepare for your interviews!</p>
+                    <form action="" class="space-y-6 mt-5 w-full">
+                        
+                        <div id="textHolder" class="grid grid-cols-[20px_85%] items-center justify-center">
+                            <div id="svgUser" class="col-start-1 row-start-1 ml-6 rounded-full flex items-center justify-center scale-150">
+                                <i class="fa-solid fa-user" style="color: #00B4D8;"></i>
+                            </div>
+                            <input type="text" placeholder="User Name or Email address" class="col-start-1 col-end-3 row-start-1 w-[100%] rounded-full h-12 px-12 bg-transparent border-2 border-[#00B4D8] focus:bg-[#90E0EF]/20 focus:outline-none focus:border-none focus:shadow-md focus:shadow-[#CAF0F8] focus:placeholder-transparent placeholder-[#CAF0F8] placeholder:text-sm text-white placeholder-opacity-40">
+                        </div>
+
+                        <div id="passwordHolder" class="grid grid-cols-[20px_85%] items-center justify-center">
+                            <div id="svgPass" class="col-start-1 row-start-1 ml-6 rounded-full flex items-center justify-center scale-150">
+                                <i class="fa-solid fa-lock" style="color: #00B4D8;"></i>
+                            </div>
+                            <input type="password" placeholder="Password" class="col-start-1 col-end-3 row-start-1 w-[100%] rounded-full h-12 px-12 bg-transparent border-2 border-[#00B4D8] focus:bg-[#90E0EF]/20 focus:outline-none focus:border-none focus:shadow-md focus:shadow-[#CAF0F8] focus:placeholder-transparent placeholder-[#CAF0F8] placeholder:text-sm text-white placeholder-opacity-40">
+                        </div>
+
+                        <div class="flex items-center justify-center w-[100%]">
+                            <button type="submit" class="bg-linear-to-br from-[#00B4D8] via-[#0077B6] via-30% to-[#03045E] py-2 px-4 rounded-full text-[#CAF0F8] hover:scale-110 font-bold text-xl w-1/2">Sign in</button>
+                        </div>
+                    </form>
+                    <div class="text-sm mt-6 pt-3 border-t-2 border-t-[#CAF0F8] space-y-2 text-[#dbdbdb]">
+                        <p>Don't have an account? <a href="#" class="text-blue-300 font-semibold">Sign up</a></p>
+                        <p>Forgot Password? <a href="#" class="text-blue-300 font-semibold">Reset Password</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
