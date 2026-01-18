@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@keyframes rainbow-glow-hover {
+    0% { box-shadow: 0 0 45px #F72585; }
+    10% { box-shadow: 0 0 45px #B5179E; }
+    20% { box-shadow: 0 0 45px #7209B7; }
+    30% { box-shadow: 0 0 45px #560BAD; }
+    40% { box-shadow: 0 0 45px #480CA8; }
+    50% { box-shadow: 0 0 45px #3A0CA3; }
+    60% { box-shadow: 0 0 45px #3F37C9; }
+    70% { box-shadow: 0 0 45px #4361EE; }
+    80% { box-shadow: 0 0 45px #4895EF; }
+    90% { box-shadow: 0 0 45px #4CC9F0; }
+    100% { box-shadow: 0 0 45px #F72585; }
+}
+
+.infinite-glow:hover {
+    animation: rainbow-glow-hover 6s infinite linear;
+}
+
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.animate-gradient {
+    background: linear-gradient(315deg, #4cc9f0 0%, #4361ee 40%, #f72585 100%);
+    background-size: 300% 300%;
+    background-position: 0% 50%;
+}
+
+.animate-gradient:hover {
+    animation: gradient-move 2s ease forwards;
+}
