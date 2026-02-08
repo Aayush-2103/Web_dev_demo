@@ -1,0 +1,46 @@
+/* src/App.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Dark background to match the wireframe */
+  background-color: #121212; 
+  color: #F7DF1E; /* JS Yellow for text */
+  font-family: 'Courier New', Courier, monospace; /* Monospace for coding vibe */
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* --- THE MAIN CONTENT AREA --- */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center cards horizontally */
+  justify-content: center; /* Center cards vertically */
+  padding: 40px;
+  
+  /* --- GRID PATTERN MAGIC --- */
+  background-color: #151515;
+  background-image: 
+    linear-gradient(#222 1px, transparent 1px),
+    linear-gradient(90deg, #222 1px, transparent 1px);
+  background-size: 40px 40px; /* Size of the grid boxes */
+  /* -------------------------- */
+}
+
+.header-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #F7DF1E;
+  padding-bottom: 10px;
+}
