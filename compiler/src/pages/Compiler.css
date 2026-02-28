@@ -1,0 +1,234 @@
+/* Reset and Base Variables */
+.compiler-wrapper {
+  --bg-dark: #1e1e24;
+  --bg-darker: #15151a;
+  --bg-header: #1a202c;
+  --bg-panel: #22222a;
+  --border-color: #33333d;
+  --text-main: #e0e0e0;
+  --text-muted: #8b8b99;
+  --accent-blue: #2a69d4;
+  
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header */
+.compiler-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-header);
+  padding: 0 16px;
+  height: 48px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo-section h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+.practice-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(42, 105, 212, 0.2);
+  color: #a0c3ff;
+  border: 1px solid rgba(42, 105, 212, 0.4);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.practice-btn:hover {
+  background-color: rgba(42, 105, 212, 0.4);
+}
+
+/* Workspace Layout */
+.compiler-workspace {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.pane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Toolbars */
+.pane-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-panel);
+  height: 40px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.language-select {
+  background-color: transparent;
+  color: var(--text-muted);
+  border: none;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+}
+
+.language-select option {
+  background-color: var(--bg-dark);
+}
+
+.settings-icon {
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.run-btn {
+  background-color: var(--accent-blue);
+  color: white;
+  border: none;
+  padding: 6px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.run-btn:hover {
+  background-color: #1e56b8;
+}
+
+/* Left Pane Specific */
+.editor-container {
+  flex: 1;
+  background-color: var(--bg-darker);
+  /* Monaco editor will fill this div */
+}
+
+/* Draggable Divider */
+.divider {
+  width: 8px;
+  background-color: var(--bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  cursor: col-resize;
+  transition: background-color 0.2s;
+}
+
+.divider:hover,
+.divider[data-resize-handle-state="drag"] {
+  background-color: var(--border-color);
+}
+
+.divider-dots {
+  height: 30px;
+  width: 2px;
+  border-left: 2px dotted var(--text-muted);
+}
+
+/* Right Pane Specific */
+.io-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--bg-darker);
+}
+
+.io-box {
+  background-color: transparent;
+  color: var(--text-main);
+  border: none;
+  padding: 16px;
+  font-family: monospace;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+}
+
+.input-box {
+  flex: 0.4;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.info-bar {
+  background-color: var(--bg-panel);
+  color: var(--text-muted);
+  font-size: 13px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.output-header {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+  background-color: var(--bg-darker);
+}
+
+.output-box {
+  flex: 0.6;
+}
+
+/* --- Settings Dropdown --- */
+.settings-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.settings-dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: var(--bg-header);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 12px;
+  z-index: 10;
+  width: 160px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.settings-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+.settings-item select {
+  background-color: var(--bg-darker);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.settings-icon:hover {
+  color: white;
+}
